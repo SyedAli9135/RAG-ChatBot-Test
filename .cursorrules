@@ -1,0 +1,42 @@
+# Cursor IDE Rules for RAG Chatbot Project
+
+## Code Style
+- Use modern Python 3.13+ typing: `list[str]`, `str | None` (not List, Optional)
+- Always use Pydantic models for data validation, never raw dicts
+- Prefer Agno's built-in features over custom implementations
+- Keep functions focused and single-purpose
+- Use descriptive variable names, but keep them concise
+
+## Docstrings
+- All docstrings must be written in Master Yoda's speaking style
+- Example: "Agent initialize, ready for wisdom it becomes"
+- Public functions require docstrings
+- Private functions (_method) can skip docstrings if obvious
+
+## Testing
+- Write tests for all new features
+- Integration tests should use real data, not mocks
+- Test file names: test_*.py
+- Test functions: test_*
+
+## Architecture
+- Use dependency injection via FastAPI's Depends
+- Singleton pattern for global instances (agent, knowledge, db)
+- Manual RAG implementation for transparency
+
+## Error Handling
+- Always use try-except for external API calls
+- Log errors with context
+- Return meaningful error messages to users
+- Use FastAPI's HTTPException with appropriate status codes
+
+## Async/Await
+- Use async for I/O operations (API calls, file operations)
+- Use sync for CPU-bound operations (PDF parsing)
+- Run sync operations in executor when called from async context
+
+## Import Order
+1. Standard library imports
+2. Third-party imports
+3. Local application imports
+4. Blank line between each group

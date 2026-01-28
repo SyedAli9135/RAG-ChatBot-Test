@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "agno-docs": {
+      "type": "filesystem",
+      "description": "Agno framework documentation",
+      "path": "https://docs.agno.com"
+    },
+    "fastapi-docs": {
+      "type": "filesystem", 
+      "description": "FastAPI framework documentation",
+      "path": "https://fastapi.tiangolo.com"
+    },
+    "nicegui-docs": {
+      "type": "filesystem",
+      "description": "NiceGUI framework documentation", 
+      "path": "https://nicegui.io/documentation"
+    },
+    "project-context": {
+      "type": "filesystem",
+      "description": "Project files and structure",
+      "path": "."
+    }
+  }
+}
