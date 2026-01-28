@@ -11,6 +11,7 @@ class Settings(BaseSettings):
 
     log_level: str = "INFO"
     max_upload_size_mb: int = 10
+    backend_url: str = "http://localhost:8000"
 
     model_config = SettingsConfigDict(env_file=".env", case_sensitive=False)
 
